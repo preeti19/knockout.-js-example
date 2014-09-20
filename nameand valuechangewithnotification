@@ -1,0 +1,16 @@
+<p> first Name :<input data-bind="value:firstName"/></p>
+<p> First Name:<span data-bind="text:firstName"></span></p>
+<p> first Name :<input data-bind="value:firstName"/></p>
+<p> First Name:<span data-bind="text:firstName"></span></p>
+<p> first Name :<input data-bind="value:firstName"/></p>
+<p> First Name:<span data-bind="text:firstName"></span></p>
+<script src="knockout-3.2.0.js"></script>
+<script>
+var obj={
+	firstName:ko.observable('My Name')
+};
+obj.firstName.subscribe(function(){
+	console.log('some one has changed my first Name');
+})
+ko.applyBindings(obj);
+</script>
